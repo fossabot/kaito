@@ -1,0 +1,22 @@
+
+replicas: 1 # for better debugging experience
+controller:
+  env:
+    # Azure client settings
+    - name: ARM_SUBSCRIPTION_ID
+      value: ff05f55d-22b5-44a7-b704-f9a8efd493ed
+    - name: LOCATION
+      value: eastus
+    - name: AZURE_CLUSTER_NAME
+      value: bangqizhuCluster
+    - name: AZURE_NODE_RESOURCE_GROUP
+      value: MC_bangqizhuResourceGroup_bangqizhuCluster_eastus
+    - name: ARM_RESOURCE_GROUP
+      value: bangqizhuResourceGroup
+    - name: LEADER_ELECT # disable leader election for better debugging experience
+      value: "false"
+    - name: E2E_TEST_MODE
+      value: "false"
+workloadIdentity:
+  clientId: 257697c7-fe77-4298-baab-d2a178cc7213
+  tenantId: 72f988bf-86f1-41af-91ab-2d7cd011db47

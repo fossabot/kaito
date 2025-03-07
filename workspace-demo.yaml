@@ -1,12 +1,12 @@
 apiVersion: kaito.sh/v1alpha1
 kind: Workspace
 metadata:
-  name: workspace-qwen-2-5-coder-7b-instruct1
+  name: workspace-phi-3-mini-128k-bq-start1
 resource:
   instanceType: "Standard_NC24ads_A100_v4"
   labelSelector:
     matchLabels:
-      apps: qwen-2-5-coder
+      apps: phi-3
 inference:
   preset:
-    name: qwen2.5-coder-7b-instruct
+    name: phi-3-mini-128k-instruct
